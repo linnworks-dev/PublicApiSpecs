@@ -3038,10 +3038,11 @@
     "ProcessedOrderRelation": {
       "type": "object",
       "properties": {
-        "ChildOrderId": {
-          "format": "int32",
-          "description": "Child order number",
-          "type": "integer"
+        "ParentOrderPkOrderId": {
+          "format": "uuid",
+          "description": "Parent order ID",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
         },
         "ChildOrderPkOrderId": {
           "format": "uuid",
@@ -3054,11 +3055,10 @@
           "description": "Parent order number",
           "type": "integer"
         },
-        "ParentOrderPkOrderId": {
-          "format": "uuid",
-          "description": "Parent order ID",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
+        "ChildOrderId": {
+          "format": "int32",
+          "description": "Child order number",
+          "type": "integer"
         },
         "RelationType": {
           "description": "Relation type",
@@ -3069,19 +3069,6 @@
     "SplitPackaging": {
       "type": "object",
       "properties": {
-        "BinIndex": {
-          "format": "int32",
-          "description": "Bin split index",
-          "type": "integer"
-        },
-        "ItemTitle": {
-          "description": "Item Title",
-          "type": "string"
-        },
-        "PackageTitle": {
-          "description": "Package name",
-          "type": "string"
-        },
         "pkBinId": {
           "format": "uuid",
           "description": "Split bin ID",
@@ -3094,23 +3081,36 @@
           "type": "string",
           "example": "00000000-0000-0000-0000-000000000000"
         },
-        "Quantity": {
-          "format": "int32",
-          "description": "Quantity",
-          "type": "integer"
+        "PackageTitle": {
+          "description": "Package name",
+          "type": "string"
         },
         "SKU": {
           "description": "Product SKU",
           "type": "string"
         },
-        "TrackingNumber": {
-          "description": "Tracking number",
+        "ItemTitle": {
+          "description": "Item Title",
           "type": "string"
+        },
+        "Quantity": {
+          "format": "int32",
+          "description": "Quantity",
+          "type": "integer"
         },
         "Weight": {
           "format": "double",
           "description": "Item weight",
           "type": "number"
+        },
+        "TrackingNumber": {
+          "description": "Tracking number",
+          "type": "string"
+        },
+        "BinIndex": {
+          "format": "int32",
+          "description": "Bin split index",
+          "type": "integer"
         }
       }
     },

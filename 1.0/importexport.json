@@ -1177,6 +1177,23 @@
     "ImportRegisterPublicSchedules": {
       "type": "object",
       "properties": {
+        "Schedules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Schedule"
+          }
+        },
+        "LastFileChecksum": {
+          "type": "string"
+        },
+        "ImportStatus": {
+          "description": "Current import status",
+          "type": "string"
+        },
+        "ImportSkipped": {
+          "description": "If import was skipped",
+          "type": "boolean"
+        },
         "Id": {
           "format": "int32",
           "type": "integer"
@@ -1232,6 +1249,12 @@
         "FriendlyName": {
           "type": "string"
         },
+        "Executing": {
+          "type": "boolean"
+        },
+        "justOnce": {
+          "type": "boolean"
+        },
         "Started": {
           "format": "date-time",
           "type": "string"
@@ -1243,30 +1266,7 @@
         "IsQueued": {
           "type": "boolean"
         },
-        "LastFileChecksum": {
-          "type": "string"
-        },
-        "justOnce": {
-          "type": "boolean"
-        },
         "Enabled": {
-          "type": "boolean"
-        },
-        "Executing": {
-          "type": "boolean"
-        },
-        "Schedules": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Schedule"
-          }
-        },
-        "ImportStatus": {
-          "description": "Current import status",
-          "type": "string"
-        },
-        "ImportSkipped": {
-          "description": "If import was skipped",
           "type": "boolean"
         },
         "IsNew": {
@@ -1310,15 +1310,6 @@
           "format": "date-time",
           "type": "string"
         },
-        "Schedules": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Schedule"
-          }
-        },
-        "LastExportStatus": {
-          "type": "boolean"
-        },
         "Id": {
           "format": "int32",
           "type": "integer"
@@ -1330,9 +1321,6 @@
           "type": "string"
         },
         "Executing": {
-          "type": "boolean"
-        },
-        "justOnce": {
           "type": "boolean"
         },
         "Started": {
@@ -1347,6 +1335,18 @@
           "type": "boolean"
         },
         "Enabled": {
+          "type": "boolean"
+        },
+        "justOnce": {
+          "type": "boolean"
+        },
+        "Schedules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Schedule"
+          }
+        },
+        "LastExportStatus": {
           "type": "boolean"
         },
         "IsNew": {
