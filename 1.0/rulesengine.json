@@ -1777,19 +1777,19 @@
         "RuleName": {
           "type": "string"
         },
-        "RuleType": {
-          "enum": [
-            "Test",
-            "Orders"
-          ],
-          "type": "string"
-        },
         "Enabled": {
           "type": "boolean"
         },
         "RunOrder": {
           "format": "int32",
           "type": "integer"
+        },
+        "RuleType": {
+          "enum": [
+            "Test",
+            "Orders"
+          ],
+          "type": "string"
         },
         "pkRuleId_Draft": {
           "format": "int32",
@@ -2073,10 +2073,6 @@
           "description": "How the frontend allows inputting for this property",
           "type": "string"
         },
-        "Description": {
-          "description": "A description for the property, visible to the user",
-          "type": "string"
-        },
         "Editable": {
           "description": "Can the user edit this property?",
           "type": "boolean"
@@ -2095,7 +2091,11 @@
           "type": "string"
         },
         "SubHeading": {
-          "description": "A subheading used within grid header",
+          "description": "A subheading used within grid header or underneath the property name if not in a grid.",
+          "type": "string"
+        },
+        "Tooltip": {
+          "description": "A tooltip to display next to the header",
           "type": "string"
         }
       }
