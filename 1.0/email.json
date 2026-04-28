@@ -239,9 +239,18 @@
           "description": "Tempalte friendly name",
           "type": "string"
         },
+        "Enabled": {
+          "description": "Template enabled or not",
+          "type": "boolean"
+        },
         "TemplateType": {
           "description": "Template type. Used to map database field",
           "type": "string"
+        },
+        "TemplateTypeDefinition": {
+          "$ref": "#/definitions/EmailTemplateType",
+          "description": "Template type definition. It's part of this entity because we always need the definition when we get the EmailTemplate entity. To change it, set the \"TemplateType\" property",
+          "readOnly": true
         },
         "Subject": {
           "description": "Subject of the email",
@@ -263,23 +272,14 @@
           "description": "Indicate if the email will have an invoice attached",
           "type": "boolean"
         },
-        "Enabled": {
-          "description": "Template enabled or not",
-          "type": "boolean"
+        "Body": {
+          "description": "Email body content",
+          "type": "string"
         },
         "fkEmailAccountRowId": {
           "format": "int32",
           "description": "Row Id of the email account used to send the email",
           "type": "integer"
-        },
-        "Body": {
-          "description": "Email body content",
-          "type": "string"
-        },
-        "TemplateTypeDefinition": {
-          "$ref": "#/definitions/EmailTemplateType",
-          "description": "Template type definition. It's part of this entity because we always need the definition when we get the EmailTemplate entity. To change it, set the \"TemplateType\" property",
-          "readOnly": true
         },
         "PromptPreviewReferenceNumber": {
           "description": "Text to be shown to the customer when he want to preview an order",
