@@ -66,8 +66,8 @@
             "description": "The rule type.",
             "type": "string",
             "enum": [
-              "Test",
-              "Orders"
+              "Orders",
+              "Test"
             ]
           }
         ],
@@ -2000,14 +2000,14 @@
           ],
           "type": "string"
         },
+        "KeyValue": {
+          "type": "string"
+        },
         "Values": {
           "type": "array",
           "items": {
             "type": "string"
           }
-        },
-        "KeyValue": {
-          "type": "string"
         }
       }
     },
