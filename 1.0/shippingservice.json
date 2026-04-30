@@ -701,20 +701,27 @@
           "format": "int32",
           "type": "integer"
         },
-        "Date": {
-          "format": "date-time",
-          "type": "string"
-        },
         "ExternalManifestId": {
           "format": "uuid",
           "type": "string",
           "example": "00000000-0000-0000-0000-000000000000"
         },
-        "Reference": {
+        "NumConsignments": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "Date": {
+          "format": "date-time",
           "type": "string"
         },
         "IsError": {
           "type": "boolean"
+        },
+        "IsComplete": {
+          "type": "boolean"
+        },
+        "Reference": {
+          "type": "string"
         },
         "Vendor": {
           "type": "string"
@@ -722,16 +729,9 @@
         "AccountId": {
           "type": "string"
         },
-        "NumConsignments": {
-          "format": "int32",
-          "type": "integer"
-        },
         "fkShippingAPIConfigId": {
           "format": "int32",
           "type": "integer"
-        },
-        "IsComplete": {
-          "type": "boolean"
         }
       }
     },
