@@ -124,7 +124,8 @@
             "netcore21",
             "netcore31",
             "net6",
-            "net8"
+            "net8",
+            "net10"
           ],
           "type": "string"
         },
