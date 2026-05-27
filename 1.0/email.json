@@ -192,13 +192,13 @@
           "description": "Template type",
           "type": "string"
         },
-        "HTML": {
-          "description": "Indicates whether the email is a HTML email",
-          "type": "boolean"
-        },
         "IsConditions": {
           "description": "Indicate if the template has conditions defined",
           "type": "boolean"
+        },
+        "Condition": {
+          "description": "Template condition defined",
+          "type": "string"
         },
         "Enabled": {
           "description": "Indicate if the template is enabled or not",
@@ -217,12 +217,12 @@
           "description": "Indicate if this template has attachments enabled",
           "type": "boolean"
         },
-        "Condition": {
-          "description": "Template condition defined",
-          "type": "string"
-        },
         "IsAdhoc": {
           "description": "Indicates if the email type is adhoc",
+          "type": "boolean"
+        },
+        "HTML": {
+          "description": "Indicates whether the email is a HTML email",
           "type": "boolean"
         }
       }

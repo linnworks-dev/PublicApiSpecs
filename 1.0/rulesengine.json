@@ -1815,19 +1815,19 @@
           "format": "int32",
           "type": "integer"
         },
-        "ConditionName": {
-          "type": "string"
-        },
         "RunOrder": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "fkParentConditionId": {
           "format": "int32",
           "type": "integer"
         },
         "Enabled": {
           "type": "boolean"
+        },
+        "ConditionName": {
+          "type": "string"
+        },
+        "fkParentConditionId": {
+          "format": "int32",
+          "type": "integer"
         },
         "Conditions": {
           "type": "array",
