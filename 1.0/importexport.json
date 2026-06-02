@@ -527,13 +527,13 @@
         "Executing": {
           "type": "boolean"
         },
-        "ImportStatus": {
-          "description": "Current import status",
-          "type": "string"
-        },
         "ImportSkipped": {
           "description": "If import was skipped",
           "type": "boolean"
+        },
+        "ImportStatus": {
+          "description": "Current import status",
+          "type": "string"
         },
         "IsNew": {
           "type": "boolean",

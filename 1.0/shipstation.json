@@ -266,6 +266,10 @@
           "description": "Toggles whether or not to export child items",
           "type": "boolean"
         },
+        "ExportServiceItems": {
+          "description": "Toggles whether or not to export service items",
+          "type": "boolean"
+        },
         "ImportedOrderTag": {
           "format": "int32",
           "description": "The order tag to assign ShipStation imported orders",
