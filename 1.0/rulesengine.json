@@ -119,8 +119,8 @@
             "description": "The rule type.",
             "type": "string",
             "enum": [
-              "Test",
-              "Orders"
+              "Orders",
+              "Test"
             ]
           },
           {
@@ -219,8 +219,8 @@
             "description": "The rule type",
             "type": "string",
             "enum": [
-              "Test",
-              "Orders"
+              "Orders",
+              "Test"
             ]
           },
           {
@@ -1664,8 +1664,8 @@
         "type": {
           "description": "The rule type.",
           "enum": [
-            "Test",
-            "Orders"
+            "Orders",
+            "Test"
           ],
           "type": "string"
         },
@@ -1737,8 +1737,8 @@
         "type": {
           "description": "The rule type.",
           "enum": [
-            "Test",
-            "Orders"
+            "Orders",
+            "Test"
           ],
           "type": "string"
         },
@@ -1779,8 +1779,8 @@
         },
         "RuleType": {
           "enum": [
-            "Test",
-            "Orders"
+            "Orders",
+            "Test"
           ],
           "type": "string"
         },

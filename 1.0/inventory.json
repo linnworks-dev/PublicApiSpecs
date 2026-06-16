@@ -6060,6 +6060,12 @@
     "StockItemLabel": {
       "type": "object",
       "properties": {
+        "StockItemId": {
+          "format": "uuid",
+          "description": "Stock Item Id",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
         "ItemNumber": {
           "description": "Product SKU",
           "type": "string"
@@ -6087,12 +6093,6 @@
         },
         "LocationId": {
           "format": "uuid",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
-        },
-        "StockItemId": {
-          "format": "uuid",
-          "description": "Stock Item Id",
           "type": "string",
           "example": "00000000-0000-0000-0000-000000000000"
         },
@@ -6902,6 +6902,7 @@
         },
         "LocationId": {
           "format": "uuid",
+          "description": "Deprecated: no longer used by ScrapBatchedItem. Location is derived from the batch record identified by BatchInventoryId.",
           "type": "string",
           "example": "00000000-0000-0000-0000-000000000000"
         },
@@ -7035,9 +7036,6 @@
           ],
           "type": "string"
         },
-        "Site": {
-          "type": "string"
-        },
         "Value": {
           "type": "string"
         },
@@ -7046,6 +7044,9 @@
           "type": "string"
         },
         "ModifiedUserName": {
+          "type": "string"
+        },
+        "Site": {
           "type": "string"
         }
       }
@@ -11989,6 +11990,14 @@
     "StockLocation": {
       "type": "object",
       "properties": {
+        "StockLocationId": {
+          "format": "uuid",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "LocationName": {
+          "type": "string"
+        },
         "Address1": {
           "type": "string"
         },
@@ -12013,6 +12022,9 @@
         "LocationTag": {
           "type": "string"
         },
+        "IsFulfillmentCenter": {
+          "type": "boolean"
+        },
         "CountInOrderUntilAcknowledgement": {
           "type": "boolean"
         },
@@ -12020,17 +12032,6 @@
           "type": "boolean"
         },
         "IsWarehouseManaged": {
-          "type": "boolean"
-        },
-        "StockLocationId": {
-          "format": "uuid",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
-        },
-        "LocationName": {
-          "type": "string"
-        },
-        "IsFulfillmentCenter": {
           "type": "boolean"
         },
         "StockLocationIntId": {
