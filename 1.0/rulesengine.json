@@ -2508,8 +2508,8 @@
         "type": {
           "description": "The rule type.",
           "enum": [
-            "Orders",
-            "Test"
+            "Test",
+            "Orders"
           ],
           "type": "string"
         }
