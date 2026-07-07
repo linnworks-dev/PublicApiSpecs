@@ -644,6 +644,16 @@
           "type": "string",
           "example": "00000000-0000-0000-0000-000000000000"
         },
+        "CreatedDate": {
+          "format": "date-time",
+          "description": "Date the extended property was created",
+          "type": "string"
+        },
+        "LastUpdatedDate": {
+          "format": "date-time",
+          "description": "Date the extended property was last updated",
+          "type": "string"
+        },
         "Name": {
           "description": "Extended property name",
           "type": "string"

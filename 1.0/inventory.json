@@ -6060,6 +6060,12 @@
     "StockItemLabel": {
       "type": "object",
       "properties": {
+        "StockItemId": {
+          "format": "uuid",
+          "description": "Stock Item Id",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
         "ItemNumber": {
           "description": "Product SKU",
           "type": "string"
@@ -6087,12 +6093,6 @@
         },
         "LocationId": {
           "format": "uuid",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
-        },
-        "StockItemId": {
-          "format": "uuid",
-          "description": "Stock Item Id",
           "type": "string",
           "example": "00000000-0000-0000-0000-000000000000"
         },
@@ -6824,25 +6824,25 @@
         "ItemTitle": {
           "type": "string"
         },
-        "ScrapReason": {
-          "type": "string"
+        "Quantity": {
+          "format": "int32",
+          "type": "integer"
         },
         "CategoryName": {
           "type": "string"
         },
-        "Quantity": {
-          "format": "int32",
-          "type": "integer"
+        "ScrapReason": {
+          "type": "string"
         },
         "TotalCost": {
           "format": "double",
           "type": "number"
         },
-        "CreatedDate": {
-          "format": "date-time",
+        "UserName": {
           "type": "string"
         },
-        "UserName": {
+        "CreatedDate": {
+          "format": "date-time",
           "type": "string"
         },
         "StockLocationId": {
@@ -7036,6 +7036,9 @@
           ],
           "type": "string"
         },
+        "Site": {
+          "type": "string"
+        },
         "Value": {
           "type": "string"
         },
@@ -7044,9 +7047,6 @@
           "type": "string"
         },
         "ModifiedUserName": {
-          "type": "string"
-        },
-        "Site": {
           "type": "string"
         }
       }
