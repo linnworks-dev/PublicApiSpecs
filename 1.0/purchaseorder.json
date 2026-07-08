@@ -1905,11 +1905,6 @@
           "description": "Identified whether the PO is locked. This is for external application use only.",
           "type": "boolean"
         },
-        "UnitAmountTaxIncludedType": {
-          "format": "int32",
-          "description": "Unit amount includes,exclud or no tax. 0 - Tax Exclusive cost, 1 - Cost Inclusive of tax, 2 - No Tax",
-          "type": "integer"
-        },
         "LineCount": {
           "format": "int32",
           "description": "Number of items in the purchase order",
@@ -1918,6 +1913,11 @@
         "DeliveredLinesCount": {
           "format": "int32",
           "description": "Count of all purchase order lines which are delivered \r\n(lines where some but not all of the stock has been received are counted as undelivered)",
+          "type": "integer"
+        },
+        "UnitAmountTaxIncludedType": {
+          "format": "int32",
+          "description": "Unit amount includes,exclud or no tax. 0 - Tax Exclusive cost, 1 - Cost Inclusive of tax, 2 - No Tax",
           "type": "integer"
         },
         "DateOfPurchase": {
@@ -2787,15 +2787,15 @@
         "Locked": {
           "type": "boolean"
         },
-        "UnitAmountTaxIncludedType": {
-          "format": "int32",
-          "type": "integer"
-        },
         "LineCount": {
           "format": "int32",
           "type": "integer"
         },
         "DeliveredLinesCount": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "UnitAmountTaxIncludedType": {
           "format": "int32",
           "type": "integer"
         },
