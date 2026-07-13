@@ -9396,6 +9396,10 @@
           "type": "string",
           "example": "00000000-0000-0000-0000-000000000000"
         },
+        "CustomsRequired": {
+          "description": "If customs required",
+          "type": "boolean"
+        },
         "CountryName": {
           "description": "Country name",
           "type": "string"
@@ -9407,10 +9411,6 @@
         "Continent": {
           "description": "Country continent",
           "type": "string"
-        },
-        "CustomsRequired": {
-          "description": "If customs required",
-          "type": "boolean"
         },
         "TaxRate": {
           "format": "double",

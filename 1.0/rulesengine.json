@@ -1815,19 +1815,19 @@
           "format": "int32",
           "type": "integer"
         },
+        "ConditionName": {
+          "type": "string"
+        },
         "RunOrder": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fkParentConditionId": {
           "format": "int32",
           "type": "integer"
         },
         "Enabled": {
           "type": "boolean"
-        },
-        "ConditionName": {
-          "type": "string"
-        },
-        "fkParentConditionId": {
-          "format": "int32",
-          "type": "integer"
         },
         "Conditions": {
           "type": "array",
@@ -1854,6 +1854,10 @@
       "type": "object",
       "properties": {
         "pkActionId": {
+          "format": "int32",
+          "type": "integer"
+        },
+        "fkConditionId": {
           "format": "int32",
           "type": "integer"
         },
@@ -1885,10 +1889,6 @@
         },
         "ActionValue": {
           "type": "string"
-        },
-        "fkConditionId": {
-          "format": "int32",
-          "type": "integer"
         },
         "RuleVersion": {
           "format": "int32",

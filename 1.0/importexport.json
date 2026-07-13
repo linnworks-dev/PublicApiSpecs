@@ -527,13 +527,13 @@
         "Executing": {
           "type": "boolean"
         },
-        "ImportStatus": {
-          "description": "Current import status",
-          "type": "string"
-        },
         "ImportSkipped": {
           "description": "If import was skipped",
           "type": "boolean"
+        },
+        "ImportStatus": {
+          "description": "Current import status",
+          "type": "string"
         },
         "IsNew": {
           "type": "boolean",
@@ -608,23 +608,23 @@
           "format": "int32",
           "type": "integer"
         },
+        "Order": {
+          "format": "int32",
+          "type": "integer"
+        },
         "Name": {
           "type": "string"
         },
-        "ScheduleXML": {
-          "type": "string"
+        "OwnerId": {
+          "format": "int32",
+          "type": "integer"
         },
         "Migrated": {
           "format": "int32",
           "type": "integer"
         },
-        "Order": {
-          "format": "int32",
-          "type": "integer"
-        },
-        "OwnerId": {
-          "format": "int32",
-          "type": "integer"
+        "ScheduleXML": {
+          "type": "string"
         },
         "Configuration": {
           "$ref": "#/definitions/ScheduleConfiguration"
@@ -1177,23 +1177,6 @@
     "ImportRegisterPublicSchedules": {
       "type": "object",
       "properties": {
-        "Schedules": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Schedule"
-          }
-        },
-        "LastFileChecksum": {
-          "type": "string"
-        },
-        "ImportStatus": {
-          "description": "Current import status",
-          "type": "string"
-        },
-        "ImportSkipped": {
-          "description": "If import was skipped",
-          "type": "boolean"
-        },
         "Id": {
           "format": "int32",
           "type": "integer"
@@ -1249,12 +1232,6 @@
         "FriendlyName": {
           "type": "string"
         },
-        "Executing": {
-          "type": "boolean"
-        },
-        "justOnce": {
-          "type": "boolean"
-        },
         "Started": {
           "format": "date-time",
           "type": "string"
@@ -1266,7 +1243,30 @@
         "IsQueued": {
           "type": "boolean"
         },
+        "LastFileChecksum": {
+          "type": "string"
+        },
+        "justOnce": {
+          "type": "boolean"
+        },
         "Enabled": {
+          "type": "boolean"
+        },
+        "Executing": {
+          "type": "boolean"
+        },
+        "Schedules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Schedule"
+          }
+        },
+        "ImportStatus": {
+          "description": "Current import status",
+          "type": "string"
+        },
+        "ImportSkipped": {
+          "description": "If import was skipped",
           "type": "boolean"
         },
         "IsNew": {

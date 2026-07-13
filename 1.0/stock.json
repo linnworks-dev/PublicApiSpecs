@@ -2912,6 +2912,92 @@
             "$ref": "#/definitions/StockItemLevel"
           }
         },
+        "StockItemId": {
+          "format": "uuid",
+          "description": "Stock Item Id",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "ItemNumber": {
+          "description": "SKU",
+          "type": "string"
+        },
+        "ItemTitle": {
+          "description": "Item title",
+          "type": "string"
+        },
+        "MetaData": {
+          "description": "Item description",
+          "type": "string"
+        },
+        "BarcodeNumber": {
+          "description": "Barcode number",
+          "type": "string"
+        },
+        "PostalServiceId": {
+          "format": "uuid",
+          "description": "Default postal service id",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "Weight": {
+          "format": "double",
+          "description": "Item weight",
+          "type": "number"
+        },
+        "Height": {
+          "format": "double",
+          "description": "Item height",
+          "type": "number"
+        },
+        "Width": {
+          "format": "double",
+          "description": "Item width",
+          "type": "number"
+        },
+        "Depth": {
+          "format": "double",
+          "description": "Item depth",
+          "type": "number"
+        },
+        "InventoryTrackingType": {
+          "format": "int32",
+          "description": "Stock item tracking type. 0 = none. 1 = Ordered by Sell by Date. 2 = Ordered by Priority Sequence",
+          "type": "integer"
+        },
+        "SerialNumberScanRequired": {
+          "description": "User must scan item serial number when processing ordesr",
+          "type": "boolean"
+        },
+        "BatchNumberScanRequired": {
+          "description": "User must scan batch number when procesing orders",
+          "type": "boolean"
+        },
+        "IsVariationParent": {
+          "description": "Is Variation Parent",
+          "type": "boolean"
+        },
+        "CategoryName": {
+          "description": "Default category name",
+          "type": "string"
+        },
+        "CategoryId": {
+          "format": "uuid",
+          "description": "Default category id",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "PackageGroupId": {
+          "format": "uuid",
+          "description": "Default package group id",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "CreationDate": {
+          "format": "date-time",
+          "description": "Stock item creation date",
+          "type": "string"
+        },
         "ItemChannelDescriptions": {
           "description": "List of item descriptions",
           "type": "array",
@@ -2951,26 +3037,6 @@
             "$ref": "#/definitions/StockItemImage"
           }
         },
-        "ItemNumber": {
-          "description": "SKU",
-          "type": "string"
-        },
-        "ItemTitle": {
-          "description": "Item title",
-          "type": "string"
-        },
-        "BarcodeNumber": {
-          "description": "Barcode number",
-          "type": "string"
-        },
-        "MetaData": {
-          "description": "Item description",
-          "type": "string"
-        },
-        "IsVariationParent": {
-          "description": "Is Variation Parent",
-          "type": "boolean"
-        },
         "isBatchedStockType": {
           "description": "Returns true is the stock item is tracked by batch",
           "type": "boolean",
@@ -2991,79 +3057,13 @@
           "description": "Default item tax rate. Set -1 to use country tax rate",
           "type": "number"
         },
-        "PostalServiceId": {
-          "format": "uuid",
-          "description": "Default postal service id",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
-        },
         "PostalServiceName": {
           "description": "Default postal service name",
           "type": "string"
         },
-        "CategoryId": {
-          "format": "uuid",
-          "description": "Default category id",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
-        },
-        "CategoryName": {
-          "description": "Default category name",
-          "type": "string"
-        },
-        "PackageGroupId": {
-          "format": "uuid",
-          "description": "Default package group id",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
-        },
         "PackageGroupName": {
           "description": "Default package group name",
           "type": "string"
-        },
-        "Height": {
-          "format": "double",
-          "description": "Item height",
-          "type": "number"
-        },
-        "Width": {
-          "format": "double",
-          "description": "Item width",
-          "type": "number"
-        },
-        "Depth": {
-          "format": "double",
-          "description": "Item depth",
-          "type": "number"
-        },
-        "Weight": {
-          "format": "double",
-          "description": "Item weight",
-          "type": "number"
-        },
-        "CreationDate": {
-          "format": "date-time",
-          "description": "Stock item creation date",
-          "type": "string"
-        },
-        "InventoryTrackingType": {
-          "format": "int32",
-          "description": "Stock item tracking type. 0 = none. 1 = Ordered by Sell by Date. 2 = Ordered by Priority Sequence",
-          "type": "integer"
-        },
-        "BatchNumberScanRequired": {
-          "description": "User must scan batch number when procesing orders",
-          "type": "boolean"
-        },
-        "SerialNumberScanRequired": {
-          "description": "User must scan item serial number when processing ordesr",
-          "type": "boolean"
-        },
-        "StockItemId": {
-          "format": "uuid",
-          "description": "Stock Item Id",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
         },
         "StockItemIntId": {
           "format": "int32",

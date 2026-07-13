@@ -2406,15 +2406,10 @@
     "ProcessedOrderWeb": {
       "type": "object",
       "properties": {
-        "pkOrderID": {
-          "format": "uuid",
-          "description": "Order ID",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
-        },
-        "cShippingAddress": {
-          "description": "Customer's shipping address",
-          "type": "string"
+        "nOrderId": {
+          "format": "int32",
+          "description": "Linnworks order ID",
+          "type": "integer"
         },
         "dReceivedDate": {
           "format": "date-time",
@@ -2424,6 +2419,40 @@
         "dProcessedOn": {
           "format": "date-time",
           "description": "Date when order was processed",
+          "type": "string"
+        },
+        "cFullName": {
+          "description": "Customer full name",
+          "type": "string"
+        },
+        "cEmailAddress": {
+          "description": "Customer email address",
+          "type": "string"
+        },
+        "cCountry": {
+          "description": "Country",
+          "type": "string"
+        },
+        "Source": {
+          "description": "ChannelName/Source (e.g. EBAY)",
+          "type": "string"
+        },
+        "SubSource": {
+          "description": "Order subsource (e.g. EBAY1)",
+          "type": "string"
+        },
+        "PostalServiceName": {
+          "description": "Postal service name (e.g. Next day delivery)",
+          "type": "string"
+        },
+        "pkOrderID": {
+          "format": "uuid",
+          "description": "Order ID",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "cShippingAddress": {
+          "description": "Customer's shipping address",
           "type": "string"
         },
         "timeDiff": {
@@ -2471,11 +2500,6 @@
           "description": "Country specific tax rate",
           "type": "number"
         },
-        "nOrderId": {
-          "format": "int32",
-          "description": "Linnworks order ID",
-          "type": "integer"
-        },
         "nStatus": {
           "format": "int32",
           "description": "Order status",
@@ -2487,18 +2511,6 @@
         },
         "PostalTrackingNumber": {
           "description": "Postal tracking number",
-          "type": "string"
-        },
-        "cCountry": {
-          "description": "Country",
-          "type": "string"
-        },
-        "Source": {
-          "description": "ChannelName/Source (e.g. EBAY)",
-          "type": "string"
-        },
-        "PostalServiceName": {
-          "description": "Postal service name (e.g. Next day delivery)",
           "type": "string"
         },
         "PostalServiceCode": {
@@ -2552,24 +2564,12 @@
           "description": "Company",
           "type": "string"
         },
-        "SubSource": {
-          "description": "Order subsource (e.g. EBAY1)",
-          "type": "string"
-        },
         "ChannelBuyerName": {
           "description": "Channel specific name used to identify the buyer, such as a username, normally used for eBay",
           "type": "string"
         },
         "AccountName": {
           "description": "Customer channel account name",
-          "type": "string"
-        },
-        "cFullName": {
-          "description": "Customer full name",
-          "type": "string"
-        },
-        "cEmailAddress": {
-          "description": "Customer email address",
           "type": "string"
         },
         "cPostCode": {
@@ -3038,10 +3038,11 @@
     "ProcessedOrderRelation": {
       "type": "object",
       "properties": {
-        "ChildOrderId": {
-          "format": "int32",
-          "description": "Child order number",
-          "type": "integer"
+        "ParentOrderPkOrderId": {
+          "format": "uuid",
+          "description": "Parent order ID",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
         },
         "ChildOrderPkOrderId": {
           "format": "uuid",
@@ -3054,11 +3055,10 @@
           "description": "Parent order number",
           "type": "integer"
         },
-        "ParentOrderPkOrderId": {
-          "format": "uuid",
-          "description": "Parent order ID",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
+        "ChildOrderId": {
+          "format": "int32",
+          "description": "Child order number",
+          "type": "integer"
         },
         "RelationType": {
           "description": "Relation type",
@@ -3069,19 +3069,6 @@
     "SplitPackaging": {
       "type": "object",
       "properties": {
-        "BinIndex": {
-          "format": "int32",
-          "description": "Bin split index",
-          "type": "integer"
-        },
-        "ItemTitle": {
-          "description": "Item Title",
-          "type": "string"
-        },
-        "PackageTitle": {
-          "description": "Package name",
-          "type": "string"
-        },
         "pkBinId": {
           "format": "uuid",
           "description": "Split bin ID",
@@ -3094,23 +3081,36 @@
           "type": "string",
           "example": "00000000-0000-0000-0000-000000000000"
         },
-        "Quantity": {
-          "format": "int32",
-          "description": "Quantity",
-          "type": "integer"
+        "PackageTitle": {
+          "description": "Package name",
+          "type": "string"
         },
         "SKU": {
           "description": "Product SKU",
           "type": "string"
         },
-        "TrackingNumber": {
-          "description": "Tracking number",
+        "ItemTitle": {
+          "description": "Item Title",
           "type": "string"
+        },
+        "Quantity": {
+          "format": "int32",
+          "description": "Quantity",
+          "type": "integer"
         },
         "Weight": {
           "format": "double",
           "description": "Item weight",
           "type": "number"
+        },
+        "TrackingNumber": {
+          "description": "Tracking number",
+          "type": "string"
+        },
+        "BinIndex": {
+          "format": "int32",
+          "description": "Bin split index",
+          "type": "integer"
         }
       }
     },
