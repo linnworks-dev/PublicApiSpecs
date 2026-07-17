@@ -1310,15 +1310,6 @@
           "format": "date-time",
           "type": "string"
         },
-        "Schedules": {
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/Schedule"
-          }
-        },
-        "LastExportStatus": {
-          "type": "boolean"
-        },
         "Id": {
           "format": "int32",
           "type": "integer"
@@ -1330,9 +1321,6 @@
           "type": "string"
         },
         "Executing": {
-          "type": "boolean"
-        },
-        "justOnce": {
           "type": "boolean"
         },
         "Started": {
@@ -1347,6 +1335,18 @@
           "type": "boolean"
         },
         "Enabled": {
+          "type": "boolean"
+        },
+        "justOnce": {
+          "type": "boolean"
+        },
+        "Schedules": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Schedule"
+          }
+        },
+        "LastExportStatus": {
           "type": "boolean"
         },
         "IsNew": {

@@ -2998,6 +2998,21 @@
           "description": "Stock item creation date",
           "type": "string"
         },
+        "PurchasePrice": {
+          "format": "double",
+          "description": "Default item purchase price",
+          "type": "number"
+        },
+        "RetailPrice": {
+          "format": "double",
+          "description": "Default item retail price",
+          "type": "number"
+        },
+        "TaxRate": {
+          "format": "double",
+          "description": "Default item tax rate. Set -1 to use country tax rate",
+          "type": "number"
+        },
         "ItemChannelDescriptions": {
           "description": "List of item descriptions",
           "type": "array",
@@ -3041,21 +3056,6 @@
           "description": "Returns true is the stock item is tracked by batch",
           "type": "boolean",
           "readOnly": true
-        },
-        "PurchasePrice": {
-          "format": "double",
-          "description": "Default item purchase price",
-          "type": "number"
-        },
-        "RetailPrice": {
-          "format": "double",
-          "description": "Default item retail price",
-          "type": "number"
-        },
-        "TaxRate": {
-          "format": "double",
-          "description": "Default item tax rate. Set -1 to use country tax rate",
-          "type": "number"
         },
         "PostalServiceName": {
           "description": "Default postal service name",
