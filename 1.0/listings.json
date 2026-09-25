@@ -986,70 +986,10 @@
         "ItemNumber": {
           "type": "string"
         },
-        "Title": {
-          "description": "Channel Title",
-          "type": "string"
-        },
-        "SKU": {
-          "description": "SKU for the item.",
-          "type": "string"
-        },
         "MappedBy": {
           "type": "string"
         },
         "RelistPending": {
-          "type": "boolean"
-        },
-        "Quantity": {
-          "format": "int32",
-          "description": "Quantity known listed on the channel at the point of getting the listings from the channel.\r\nThis value is not updated when inventory levels are synchronized",
-          "type": "integer"
-        },
-        "IsSuggestedToLink": {
-          "description": "Identifies if the system found suitable match",
-          "type": "boolean"
-        },
-        "IsLinked": {
-          "description": "Identifies if the item is linked",
-          "type": "boolean"
-        },
-        "ChannelSKURowId": {
-          "format": "uuid",
-          "description": "Stock_ChannelSKU RowId",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
-        },
-        "LinkedItemId": {
-          "format": "uuid",
-          "description": "Linked pkStockItemId",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
-        },
-        "MaxListedQuantity": {
-          "format": "int32",
-          "description": "Maximum listed quantity",
-          "type": "integer"
-        },
-        "EndWhenStock": {
-          "format": "int32",
-          "description": "End when stock is certain value",
-          "type": "integer"
-        },
-        "StockPercentage": {
-          "format": "double",
-          "description": "Stock percentage allocated for the channel",
-          "type": "number"
-        },
-        "LinkedItemSku": {
-          "description": "Linked item SKU",
-          "type": "string"
-        },
-        "LinkedItemTitle": {
-          "description": "Linked item title",
-          "type": "string"
-        },
-        "IgnoreSync": {
-          "description": "Identifies if the inventory should be synced for this item",
           "type": "boolean"
         },
         "ChannelReferenceId": {
@@ -1110,6 +1050,66 @@
           "type": "boolean"
         },
         "IsActive": {
+          "type": "boolean"
+        },
+        "ChannelSKURowId": {
+          "format": "uuid",
+          "description": "Stock_ChannelSKU RowId",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "LinkedItemId": {
+          "format": "uuid",
+          "description": "Linked pkStockItemId",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "IgnoreSync": {
+          "description": "Identifies if the inventory should be synced for this item",
+          "type": "boolean"
+        },
+        "SKU": {
+          "description": "SKU for the item.",
+          "type": "string"
+        },
+        "Title": {
+          "description": "Channel Title",
+          "type": "string"
+        },
+        "LinkedItemSku": {
+          "description": "Linked item SKU",
+          "type": "string"
+        },
+        "LinkedItemTitle": {
+          "description": "Linked item title",
+          "type": "string"
+        },
+        "MaxListedQuantity": {
+          "format": "int32",
+          "description": "Maximum listed quantity",
+          "type": "integer"
+        },
+        "EndWhenStock": {
+          "format": "int32",
+          "description": "End when stock is certain value",
+          "type": "integer"
+        },
+        "StockPercentage": {
+          "format": "double",
+          "description": "Stock percentage allocated for the channel",
+          "type": "number"
+        },
+        "Quantity": {
+          "format": "int32",
+          "description": "Quantity known listed on the channel at the point of getting the listings from the channel.\r\nThis value is not updated when inventory levels are synchronized",
+          "type": "integer"
+        },
+        "IsLinked": {
+          "description": "Identifies if the item is linked",
+          "type": "boolean"
+        },
+        "IsSuggestedToLink": {
+          "description": "Identifies if the system found suitable match",
           "type": "boolean"
         },
         "IsMatchByTitle": {

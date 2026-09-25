@@ -2000,14 +2000,14 @@
           ],
           "type": "string"
         },
-        "KeyValue": {
-          "type": "string"
-        },
         "Values": {
           "type": "array",
           "items": {
             "type": "string"
           }
+        },
+        "KeyValue": {
+          "type": "string"
         }
       }
     },
