@@ -256,6 +256,22 @@
           "type": "string",
           "example": "00000000-0000-0000-0000-000000000000"
         },
+        "ExportPage": {
+          "format": "int32",
+          "description": "The last export page number served to ShipStation (SHIPSTATION_EXPORT_V4 only)",
+          "type": "integer"
+        },
+        "ExportPageToken": {
+          "format": "uuid",
+          "description": "The search token used to fetch {linnworks.spa.commondata.ShipStation.ShipStationConfig.ExportPage}, so a repeated request for that page returns the same orders (SHIPSTATION_EXPORT_V4 only)",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "ExportSearchStartedAt": {
+          "format": "date-time",
+          "description": "When the current (or last completed) export search started; becomes {linnworks.spa.commondata.ShipStation.ShipStationConfig.LastSync} when the export completes,\r\nso the next export re-covers everything modified while this one was running (SHIPSTATION_EXPORT_V4 only)",
+          "type": "string"
+        },
         "AutoProcessOrdersLocation": {
           "format": "uuid",
           "description": "The location to process orders from",
