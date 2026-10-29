@@ -9,6 +9,54 @@
     "https"
   ],
   "paths": {
+    "/api/Inventory/GetStockSupplierStatsBulk": {
+      "get": {
+        "tags": [
+          "Inventory"
+        ],
+        "summary": "GetStockSupplierStatsBulk",
+        "description": "Use this call to retrieve report about \"item supplier stat\"\n<b>Rate limit: </b><span style=\"background-color:#0272d9;color:white;padding:4px 8px;text-align:center;border-radius:5px; font-size: small;\"><b>150</b></span> / minute",
+        "operationId": "GetStockSupplierStatsBulk",
+        "consumes": [],
+        "produces": [
+          "application/json",
+          "text/json",
+          "application/xml",
+          "text/xml"
+        ],
+        "parameters": [
+          {
+            "name": "inventoryItemIds",
+            "in": "query",
+            "description": "Used to specify report stock item ids",
+            "type": "array",
+            "items": {
+              "type": "string",
+              "format": "uuid"
+            },
+            "collectionFormat": "multi"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/StockItemSupplierStat"
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "token": [
+              "token"
+            ]
+          }
+        ]
+      }
+    },
     "/api/Inventory/CreateStockSupplierStat": {
       "post": {
         "tags": [
@@ -5598,69 +5646,9 @@
           }
         ]
       }
-    },
-    "/api/Inventory/GetStockSupplierStatsBulk": {
-      "get": {
-        "tags": [
-          "Inventory"
-        ],
-        "summary": "GetStockSupplierStatsBulk",
-        "description": "Use this call to retrieve report about \"item supplier stat\"\n<b>Rate limit: </b><span style=\"background-color:#0272d9;color:white;padding:4px 8px;text-align:center;border-radius:5px; font-size: small;\"><b>150</b></span> / minute",
-        "operationId": "GetStockSupplierStatsBulk",
-        "consumes": [],
-        "produces": [
-          "application/json",
-          "text/json",
-          "application/xml",
-          "text/xml"
-        ],
-        "parameters": [
-          {
-            "name": "inventoryItemIds",
-            "in": "query",
-            "description": "Used to specify report stock item ids",
-            "type": "array",
-            "items": {
-              "type": "string",
-              "format": "uuid"
-            },
-            "collectionFormat": "multi"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/StockItemSupplierStat"
-              }
-            }
-          }
-        },
-        "security": [
-          {
-            "token": [
-              "token"
-            ]
-          }
-        ]
-      }
     }
   },
   "definitions": {
-    "Inventory_CreateStockSupplierStatRequest": {
-      "type": "object",
-      "properties": {
-        "itemSuppliers": {
-          "description": "List of StockItemSupplierStat",
-          "type": "array",
-          "items": {
-            "$ref": "#/definitions/StockItemSupplierStat"
-          }
-        }
-      }
-    },
     "StockItemSupplierStat": {
       "type": "object",
       "properties": {
@@ -5740,6 +5728,18 @@
           "format": "int32",
           "description": "Stock Item interger Id",
           "type": "integer"
+        }
+      }
+    },
+    "Inventory_CreateStockSupplierStatRequest": {
+      "type": "object",
+      "properties": {
+        "itemSuppliers": {
+          "description": "List of StockItemSupplierStat",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/StockItemSupplierStat"
+          }
         }
       }
     },
@@ -7036,6 +7036,9 @@
           ],
           "type": "string"
         },
+        "Site": {
+          "type": "string"
+        },
         "Value": {
           "type": "string"
         },
@@ -7044,9 +7047,6 @@
           "type": "string"
         },
         "ModifiedUserName": {
-          "type": "string"
-        },
-        "Site": {
           "type": "string"
         }
       }
@@ -11990,14 +11990,6 @@
     "StockLocation": {
       "type": "object",
       "properties": {
-        "StockLocationId": {
-          "format": "uuid",
-          "type": "string",
-          "example": "00000000-0000-0000-0000-000000000000"
-        },
-        "LocationName": {
-          "type": "string"
-        },
         "Address1": {
           "type": "string"
         },
@@ -12022,9 +12014,6 @@
         "LocationTag": {
           "type": "string"
         },
-        "IsFulfillmentCenter": {
-          "type": "boolean"
-        },
         "CountInOrderUntilAcknowledgement": {
           "type": "boolean"
         },
@@ -12032,6 +12021,17 @@
           "type": "boolean"
         },
         "IsWarehouseManaged": {
+          "type": "boolean"
+        },
+        "StockLocationId": {
+          "format": "uuid",
+          "type": "string",
+          "example": "00000000-0000-0000-0000-000000000000"
+        },
+        "LocationName": {
+          "type": "string"
+        },
+        "IsFulfillmentCenter": {
           "type": "boolean"
         },
         "StockLocationIntId": {
