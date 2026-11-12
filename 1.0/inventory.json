@@ -6824,25 +6824,25 @@
         "ItemTitle": {
           "type": "string"
         },
-        "Quantity": {
-          "format": "int32",
-          "type": "integer"
+        "ScrapReason": {
+          "type": "string"
         },
         "CategoryName": {
           "type": "string"
         },
-        "ScrapReason": {
-          "type": "string"
+        "Quantity": {
+          "format": "int32",
+          "type": "integer"
         },
         "TotalCost": {
           "format": "double",
           "type": "number"
         },
-        "UserName": {
-          "type": "string"
-        },
         "CreatedDate": {
           "format": "date-time",
+          "type": "string"
+        },
+        "UserName": {
           "type": "string"
         },
         "StockLocationId": {
