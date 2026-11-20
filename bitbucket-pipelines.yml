@@ -7,7 +7,7 @@ pipelines:
             clone:
                 enabled: false
             script:
-                - git clone git@bitbucket.org:linn_systems/linn_public_api_specs.git --branch master
+                - git clone git@ssh.bitbucket.org:linn_systems/linn_public_api_specs.git --branch master
                 - cd linn_public_api_specs
                 - ls -l
                 - rm -rf bitbucket-pipelines.yml
@@ -21,7 +21,7 @@ pipelines:
             clone:
                 enabled: false
             script:
-                - git clone git@bitbucket.org:linn_systems/linn_public_api_specs.git --branch master
+                - git clone git@ssh.bitbucket.org:linn_systems/linn_public_api_specs.git --branch master
                 - cd linn_public_api_specs
                 - rm -rf bitbucket-pipelines.yml
                 - npx rdme@v10 openapi upload '1.0/auth.json' --key=$key --slug=authenticate-api.json
